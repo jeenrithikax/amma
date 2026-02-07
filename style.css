@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #ffe6f0, #fff0f5);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+h1 {
+    color: #ff3366;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.greeting {
+    font-size: 1.5em;
+    color: #ff4d94;
+    margin: 10px 0;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff6699;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff3385;
+}
+
+#message {
+    font-size: 1.5em;
+    color: #ff4d94;
+    margin-top: 30px;
+    display: none;
+    animation: fadeIn 2s forwards;
+}
+
+.heart {
+    color: red;
+    font-size: 2em;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.confetti, .floating-heart {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.floating-heart {
+    font-size: 24px;
+    color: #ff3366;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-600px) scale(0.5); opacity: 0; }
+}
+.slideshow {
+    max-width: 60%;  /* width adjust pannalam */
+    margin: 20px auto;
+    position: relative;
+    height: auto;
+}
+
+.slide {
+    width: 100%;       /* slideshow width use pannum */
+    max-height: 300px; /* chinna height fix pannirukom */
+    object-fit: cover; /* crop pannama fit agum */
+    display: none;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,50,150,0.5);
+}
+

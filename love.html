@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amma’s Surprise ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" autoplay loop>
+  <source src="amma.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="container">
+    <h1>Surprise For Amma ❤️</h1>
+    <p class="greeting">Amma, unakku naan romba love pannuren… 🥰</p>
+    <p class="greeting">Unakku ennoda life-la ellam romba special 😘</p>
+
+    <!-- Photo Slideshow -->
+    <div class="slideshow">
+        <img class="slide" src="photo1.jpg" alt="Amma Photo 1">
+        <img class="slide" src="photo2.jpg" alt="Amma Photo 2">
+        <img class="slide" src="photo3.jpg" alt="Amma Photo 3">
+    </div>
+
+    <button onclick="showMessage()">Click to see your surprise ❤️</button>
+
+    <div id="message">
+        <p><span class="heart">❤️</span> You are my world, Amma! <span class="heart">❤️</span></p>
+        <p>Thank you for everything you do 🥰</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+</body>
+</html>
